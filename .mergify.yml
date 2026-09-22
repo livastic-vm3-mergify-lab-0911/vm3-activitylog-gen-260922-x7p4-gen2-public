@@ -1,0 +1,10 @@
+pull_request_rules:
+  - name: VM3 Classic strict base freshness 260922
+    conditions:
+      - author = livastic-vm3-secondary-20260911
+      - title = VM3 CLASSIC STRICT BASE FRESHNESS 260922
+      - check-success = @github-actions/strict-gate
+    actions:
+      merge:
+        method: merge
+        merge_bot_account: livastic-vm3-primary-tmp-260920

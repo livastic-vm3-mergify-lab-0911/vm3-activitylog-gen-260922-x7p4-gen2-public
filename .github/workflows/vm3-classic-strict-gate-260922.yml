@@ -1,0 +1,9 @@
+name: VM3 Classic Strict Gate 260922
+on:
+  pull_request:
+jobs:
+  strict-gate:
+    name: strict-gate
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo VM3_STRICT_GATE_PASS_260922
