@@ -1,0 +1,8 @@
+pull_request_rules:
+  - name: VM3 stale required reviewer freshness safety 260922
+    conditions:
+      - title = VM3 STALE REQUIRED REVIEWER FRESHNESS 260922
+      - label = vm3-stale-review-trigger-260922
+    actions:
+      merge:
+        method: merge
