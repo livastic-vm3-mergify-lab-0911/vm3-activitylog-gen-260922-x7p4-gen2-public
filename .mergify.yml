@@ -8,3 +8,18 @@ pull_request_rules:
       merge:
         method: merge
         merge_bot_account: livastic-vm3-primary-tmp-260920
+
+queue_rules:
+  - name: vm3-classic-app-prov-mq-260924
+    queue_conditions: []
+    merge_conditions:
+      - check-success = vm3-classic-mq-gate
+    batch_size: 1
+    batch_max_wait_time: 10 seconds
+    merge_method: squash
+    merge_bot_account: livastic-vm3-primary-tmp-260920
+    branch_protection_injection_mode: merge
+
+merge_queue:
+  mode: serial
+  max_parallel_checks: 1
