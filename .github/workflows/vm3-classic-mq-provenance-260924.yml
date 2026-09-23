@@ -1,0 +1,19 @@
+name: VM3 Classic MQ producer provenance 260924
+on:
+  pull_request:
+    branches:
+      - vm3-classic-mq-target-260924
+permissions:
+  contents: read
+jobs:
+  Summary:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Expected producer deliberately fails
+        run: |
+          echo VM3_CLASSIC_MQ_EXPECTED_GITHUB_ACTIONS_SUMMARY_FAIL_260924
+          exit 1
+  vm3-classic-mq-gate:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo VM3_CLASSIC_MQ_GATE_PASS_260924
