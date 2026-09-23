@@ -1,7 +1,7 @@
 pull_request_rules:
   - name: VM3 MQ synthetic Summary producer 260924
     conditions:
-      - title ~= ^merge queue: checking #3 on vm3-classic-mq-target-260924
+      - 'title ~= ^merge queue: checking #3 on vm3-classic-mq-target-260924'
     actions:
       label:
         add:
