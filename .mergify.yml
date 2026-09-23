@@ -23,10 +23,3 @@ queue_rules:
 merge_queue:
   mode: serial
   max_parallel_checks: 1
-
-merge_protections:
-  - name: VM3 Classic MQ wrong-source Mergify control 260924
-    if:
-      - base = vm3-classic-mq-target-260924
-    success_conditions:
-      - base = vm3-classic-mq-target-260924
