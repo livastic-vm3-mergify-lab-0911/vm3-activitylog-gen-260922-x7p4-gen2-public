@@ -1,4 +1,11 @@
 pull_request_rules:
+  - name: VM3 MQ synthetic Summary producer 260924
+    conditions:
+      - title ~= ^merge queue: checking #3 on vm3-classic-mq-target-260924
+    actions:
+      label:
+        add:
+          - vm3-mq-summary-producer-260924
   - name: VM3 Classic strict base freshness 260922
     conditions:
       - author = livastic-vm3-secondary-20260911
